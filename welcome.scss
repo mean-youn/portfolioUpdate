@@ -28,6 +28,18 @@ body {
   background: linear-gradient(45deg, #8d62b9, #05226d);
   z-index: -1;
 }
+//top버튼
+a.main {
+  z-index: 99;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  right: 0;
+  bottom: 0;
+  img {
+    width: 100%;
+  }
+}
 
 //헤더
 header {
@@ -104,6 +116,10 @@ section {
   height: 100vh;
   position: relative;
   z-index: 1;
+  overflow: hidden;
+}
+.lottie {
+  position: absolute;
 }
 
 // 메인화면
@@ -116,7 +132,6 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-
   //   perspective: 1000px;
   h2 {
     z-index: 1;
@@ -176,6 +191,7 @@ section {
   width: 100%;
   overflow: hidden;
   .inner {
+    border: 1px solid #000;
     margin: auto;
     position: relative;
   }
@@ -183,30 +199,33 @@ section {
 
 //섹션1
 #sect1 {
-  .inner {
-    border: 1px solid #000;
+  .rocket {
+    transform: translateY(-50%) rotate(-125deg);
+  }
+  .desc {
+    width: 40%;
+    position: absolute;
+    padding: 45px 5px;
+    background-color: #4f40b1;
   }
   .swiperContainer {
     position: relative;
-    width: 120%;
+    width: 100%;
     aspect-ratio: 1;
-    top: 50%;
-    left: 100%;
     transform: translate(-50%, -50%);
   }
   .swiperWrapper {
     background: url(./images/project_dotted.svg) no-repeat left top / cover;
-    width: 100%;
+    width: 95%;
     aspect-ratio: 1;
     position: absolute;
     transition: 0.35s;
   }
   .swiperSlide {
     max-width: 650px;
-    height: 60vh;
     position: absolute;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
     transform: translate(-50%, -50%);
@@ -219,30 +238,11 @@ section {
     &.on h3 {
       display: block;
     }
-    &:hover span{
-        color: #05226d;
+    &:hover span {
+      color: #05226d;
     }
-    &.on span{
-        color: #05226d;
-    }
-    &:nth-child(1) {
-      top: 50%;
-      left: 0;
-    }
-    &:nth-child(2) {
-      top: 0;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(90deg);
-    }
-    &:nth-child(3) {
-      top: 50%;
-      left: 100%;
-      transform: translate(-50%, -50%) rotate(180deg);
-    }
-    &:nth-child(4) {
-      top: 100%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(270deg);
+    &.on span {
+      color: #05226d;
     }
     img {
       display: block;
@@ -253,21 +253,26 @@ section {
     h3 {
       font-size: 25px;
       display: none;
+      font-family: SpaceA;
     }
   }
   .btn-box {
     position: absolute;
-    left: 40%;
-    transform: translateX(-50%);
-    display: flex;
-    width: 300px;
-    justify-content: space-between;
+    font-size: 18px;
+    z-index: 1;
   }
   span {
-    color: #4f40b1;
-    font-weight: bold;
-    font-size: 3.6vw;
+    color: #ffffff;
+    // font-weight: bold;
     cursor: pointer;
+    margin: 15px 10px 0 0;
+  }
+}
+
+//섹션2
+#sect2 {
+  .inner {
+    overflow: hidden;
   }
 }
 
@@ -305,28 +310,61 @@ section {
   .sectwrap {
     background: url(./images/content_bg_mobile.svg) no-repeat left top / cover;
     .inner {
-      width: 98%;
+      position: relative;
+      width: 70%;
       min-width: 760px;
-      height: calc(100% - 75px);
-      top: 60px;
+      height: calc(100% - 120px);
+      top: 80px;
+      left: 50%;
+      transform: translateX(-50%);
       padding: 5px;
       flex-direction: column;
     }
   }
 
   #sect1 {
+    .rocket {
+        top: 35%;
+      }
     .inner {
       width: 100%;
       height: calc(100% - 75px);
       top: 60px;
-      .swiperSlide {
-        width: 20vw;
-        &.on {
-          width: 80vw;
-        }
+      .desc {
+        width: 70% !important;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%);
       }
-      .btn-box {
-        bottom: 180px;
+      .swiperContainer {
+        left: 50%;
+        top: 100%;
+      }
+      .swiperSlide {
+        width: 18vw;
+        height: 50vh;
+        &.on {
+          width: 70vw;
+        }
+        &:nth-child(1) {
+          top: 0;
+          left: 50%;
+        }
+        &:nth-child(2) {
+          top: 50%;
+          left: 100%;
+          transform: translate(-50%, -50%) rotate(90deg);
+        }
+        &:nth-child(3) {
+          top: 100%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(180deg);
+        }
+        &:nth-child(4) {
+          top: 50%;
+          left: 0;
+          transform: translate(-50%, -50%) rotate(270deg);
+        }
       }
     }
   }
@@ -361,27 +399,65 @@ section {
       width: 98%;
       max-width: 1000px;
       min-width: 760px;
-      height: calc(100% - 125px);
-      top: 100px;
+      height: calc(100% - 145px);
+      top: 95px;
       padding: 10px;
     }
   }
   #sect1 {
+    .rocket{
+        top: 34%;
+    }
     .inner {
       width: 100%;
       justify-content: space-around;
-      height: calc(100% - 125px);
-      top: 100px;
+      height: calc(100% - 190px);
+      top: 160px;
+      .desc {
+        left: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .swiperContainer {
+        top: 50%;
+        left: 140%;
+      }
       .swiperSlide {
         width: 40vw;
         max-width: 610px;
+        height: 60vh;
         &.on {
           width: 70vw;
         }
+        &:nth-child(1) {
+          top: 50%;
+          left: 0;
+        }
+        &:nth-child(2) {
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(90deg);
+        }
+        &:nth-child(3) {
+          top: 50%;
+          left: 100%;
+          transform: translate(-50%, -50%) rotate(180deg);
+        }
+        &:nth-child(4) {
+          top: 100%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(270deg);
+        }
       }
-      .btn-box {
-        bottom: 150px;
-      }
+    }
+  }
+  #sect2 {
+    .inner {
+      min-width: 750px;
+      max-width: 1000px;
+      padding: 10px;
+      height: calc(100% - 240px) !important;
+      top: 180px;
     }
   }
 }
@@ -396,7 +472,7 @@ section {
     }
     li span {
       top: -15px;
-      height: 13px;
+      height: 15px !important;
     }
   }
   .sectwrap {
@@ -405,23 +481,34 @@ section {
       min-width: 900px;
       max-width: 1140px;
       min-width: 760px;
-      height: calc(100% - 205px);
+      height: calc(100% - 275px);
       top: 180px;
     }
     #sect1 {
+        .rocket{
+            top: 31%;
+            left: 10%;
+        }
       .inner {
         height: calc(100% - 205px);
         top: 180px;
+        .desc{
+            top: 35%;
+        }
         .swiperSlide {
-          width: 30vw;
-
+          width: 18vw;
+          min-width: 450px;
           &.on {
-            width: 60vw;
+            width: 30vw;
           }
         }
-        .btn-box {
-          bottom: 115px;
-        }
+      }
+    }
+    #sect2 {
+      .inner {
+        max-width: 1400px;
+        min-width: 1100px;
+        padding: 10px;
       }
     }
   }
