@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Box Color</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <button id="colorBtn">Change Color</button>
+  
+  <script>
+    const box = document.querySelector('.box');
+    const colorBtn = document.querySelector('#colorBtn');
+    const colors = ['red', 'green', 'blue', 'yellow', 'purple'];
+    let index = 0;
+    
+    colorBtn.addEventListener('click', () => {
+      box.style.backgroundColor = colors[index];
+      index = (index + 1) % colors.length;
+    });
+  </script>
+</body>
+</html>
