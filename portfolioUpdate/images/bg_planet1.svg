@@ -1,0 +1,12 @@
+<svg width="152" height="152" viewBox="0 0 152 152" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="75.514" cy="75.7031" r="61" transform="rotate(-16.0867 75.514 75.7031)" fill="#FF9E80"/>
+<mask id="mask0_374_426" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="14" y="14" width="123" height="123">
+<circle cx="75.514" cy="75.7031" r="61" transform="rotate(-16.0867 75.514 75.7031)" fill="#FF9E80"/>
+</mask>
+<g mask="url(#mask0_374_426)">
+<rect x="8.20703" y="51.1616" width="115.744" height="15.641" transform="rotate(-16.0867 8.20703 51.1616)" fill="#FF6939"/>
+<rect x="8.72363" y="86.825" width="134.513" height="15.641" transform="rotate(-16.0867 8.72363 86.825)" fill="#FF6939"/>
+<rect x="18.2588" y="119.888" width="134.513" height="15.641" transform="rotate(-16.0867 18.2588 119.888)" fill="#FF6939"/>
+</g>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M72.2555 127.762C104.626 118.427 123.299 84.6183 113.964 52.248C109.29 36.0392 98.4793 23.2645 84.7854 15.7209C107.892 18.9586 128.081 35.3801 134.964 59.248C144.299 91.6183 125.626 125.427 93.2555 134.762C77.0941 139.423 60.5742 137.102 46.9205 129.58C55.1517 130.734 63.7532 130.214 72.2555 127.762Z" fill="#DC876C" fill-opacity="0.54"/>
+</svg>
