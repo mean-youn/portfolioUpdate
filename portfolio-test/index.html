@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <style>
+      body {
+        width: 100%;
+        height: 100vh;
+        /* overflow-x: hidden; */
+      }
+      .swiper-container{
+        position: relative;
+        width: 1000px;
+        aspect-ratio: 1;
+        top: 50%;
+        left: 100%;
+        transform: translate(-50%, -50%);
+        background: #bd6161;
+      }
+      .swiper-wrapper {
+        width: 100%;
+        aspect-ratio: 1;
+        /* border-radius: 100%; */
+        border: 1px solid #000;
+        position: absolute;
+        transition: 0.35s;
+        /* transform-origin: 50% 50%; */
+      }
+      .swiper-slide {
+        width: 400px;
+        border: 1px solid #000;
+        /* height: 500px; */
+        aspect-ratio: 3/4;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        transform: translate(-50%, -50%);
+      }
+      .swiper-slide.on {
+        width: 600px;
+        transform: translate(-50%, -50%) ;
+      }
+      .swiper-slide:nth-child(1) {
+        top: 50%;
+        left: 0;
+      }
+      .swiper-slide:nth-child(2) {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+      .swiper-slide:nth-child(3) {
+        top: 50%;
+        left: 100%;
+        transform: translate(-50%, -50%) rotate(180deg);
+      }
+      .swiper-slide:nth-child(4) {
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(270deg);
+      }
+      img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 100%;
+      }
+      .btnbox {
+        position: absolute;
+        left: 0;
+        transform: translateX(-50%);
+        bottom: 10%;
+        display: flex;
+        width: 250px;
+        justify-content: space-between;
+      }
+      span {
+        font-weight: bold;
+        cursor: pointer;
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide on">
+            <img src="./images/project01_mockup.jpg" alt="" />
+            <h3>project01</h3>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/project02_thumbnail.svg" alt="" />
+            <h3>project02</h3>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/project03_thumbnail.svg" alt="" />
+            <h3>project03</h3>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/project03_thumbnail.svg" alt="" />
+            <h3>project04</h3>
+          </div>
+        </div>
+        <div class="btnbox">
+            <span class="btn prev">이전</span>
+            <span class="btn next">다음</span>
+        </div>
+    </div>
+
+    <script src="./jquery-3.6.3.min.js"></script>
+    <script>
+      const rotateCircle = document.querySelector(".swiper-wrapper");
+      const rotateContents = rotateCircle.querySelectorAll(".swiper-slide");
+      const prev = document.querySelector(".prev");
+      const next = document.querySelector(".next");
+      const deg = 90;
+      const len = rotateContents.length - 1;
+      let i = 0;
+      let num = 0;
+      let active = 0;
+
+      function addOn(i, lists) {
+        for (let el of lists) {
+          el.classList.remove("on");
+        }
+        lists[i].classList.add("on");
+
+        //article 개수만큼 반복
+        for (let el of lists) {
+          let img = el.querySelector("img");
+          el.style.transform = `rotate(${deg * i}deg) tra`;
+          i++;
+        }
+      }
+
+      prev.addEventListener("click", () => {
+        num++;
+        rotateCircle.style.transform = `rotate(${deg * num}deg) `;
+        (active == 0)
+          ? (active = len)
+          : active--;
+          addOn(active, rotateContents)
+      });
+
+      next.addEventListener("click", ()=>{
+        num--;
+        rotateCircle.style.transform=`rotate(${deg*num}deg) `;
+        
+        (active == len)? active =0 : active ++;
+        addOn(active, rotateContents)
+      })
+    </script>
+  </body>
+</html>
