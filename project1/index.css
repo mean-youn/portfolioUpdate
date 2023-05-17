@@ -1,0 +1,195 @@
+@import url(/reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+body {
+  font-family: "Jua", sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+.fixed-text {
+  z-index: 1;
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  color: #0078e9;
+  font-size: 32px;
+  text-shadow: white 5px 2px;
+}
+
+section {
+  height: 100vh;
+  background-color: #bfe0ff;
+  position: relative;
+}
+section .back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+section .back img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.inner {
+  width: 1440px;
+  margin: auto;
+  padding: 30px 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#sect1 .back img {
+  opacity: 0.34;
+}
+#sect1 .text {
+  color: white;
+  padding: 30px 0;
+}
+#sect1 h3 {
+  font-size: 48px;
+  color: #6091be;
+  padding: 50px 0;
+}
+#sect1 p {
+  font-size: 30px;
+  line-height: 40px;
+}
+#sect1 p b {
+  font-style: none;
+  font-size: 32px;
+  color: #4faaff;
+}
+#sect1 .imgwrap {
+  position: relative;
+  left: 50%;
+}
+#sect1 .imgwrap img {
+  width: 250px;
+}
+
+#sect2 h3 {
+  font-size: 48px;
+  text-align: center;
+  color: #0078E9;
+  padding: 80px 0;
+}
+#sect2 .wrap {
+  justify-content: space-evenly;
+  align-items: center;
+  color: #3D69AB;
+  font-size: 26px;
+  line-height: 30px;
+  letter-spacing: 1.2px;
+}
+#sect2 .wrap .mindmap {
+  width: 55%;
+}
+#sect2 .wrap .mindmap img {
+  width: 100%;
+}
+#sect2 .wrap .desc {
+  width: 35%;
+}
+#sect2 .wrap .desc b {
+  font-style: none;
+  color: #4faaff;
+}
+
+#sect3 .back {
+  transform: rotate(180deg);
+}
+#sect3 .wrap {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#sect3 .arrow {
+  width: 50px;
+}
+#sect3 .arrow img {
+  width: 100%;
+}
+#sect3 .row {
+  justify-content: space-between;
+  align-items: center;
+  height: 250px;
+  margin: 20px 0;
+  width: 100%;
+}
+#sect3 .row .col1 {
+  width: 25%;
+}
+#sect3 .row .col1 img {
+  width: 100%;
+  height: 100%;
+}
+#sect3 .row .desc {
+  width: 60%;
+  color: #3D69AB;
+  font-size: 26px;
+  line-height: 30px;
+  letter-spacing: 1.2px;
+}
+#sect3 .row h4 {
+  font-size: 35px;
+  line-height: 60px;
+  color: #0078E9;
+}
+#sect3 .row2 {
+  color: white;
+  justify-content: space-around;
+  position: relative;
+}
+#sect3 .key {
+  font-size: 45px;
+  position: relative;
+  padding: 10px;
+}
+#sect3 .key img {
+  z-index: -1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+#sect4 .wrap {
+  justify-content: space-between;
+  align-items: center;
+}
+#sect4 .wrap .col {
+  width: 40%;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#sect4 .wrap .col.col1, #sect4 .wrap .col.col2 {
+  width: 25%;
+}
+#sect4 .wrap .col img {
+  width: 250px;
+}
+#sect4 .wrap .col h3 {
+  text-align: center;
+  font-size: 48px;
+  color: #0078E9;
+}
+#sect4 .wrap .col .imgwrap {
+  padding: 50px 0;
+}
+#sect4 .wrap span {
+  font-size: 100px;
+  color: #3D69AB;
+}

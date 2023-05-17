@@ -1,0 +1,583 @@
+@import url(/reset.css);
+@font-face {
+  font-family: Jua;
+  src: url(./font/Jua-Regular.ttf);
+}
+body {
+  font-family: Jua;
+  width: 100%;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+#sect1 .circle {
+  width: 500px;
+  height: 500px;
+  border-radius: 100%;
+  position: absolute;
+  z-index: -1;
+  background-color: #ffb2b7;
+}
+#sect1 .circle.circle1 {
+  top: -250px;
+  right: -250px;
+}
+#sect1 .circle.circle2 {
+  bottom: -200px;
+  left: -200px;
+}
+#sect1 .desc {
+  position: absolute;
+  width: 50%;
+  max-width: 450px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  line-height: 40px;
+  color: #ffffff;
+  bottom: 0;
+  left: 0;
+}
+#sect1 .desc span {
+  display: inline;
+}
+#sect1 .desc span img {
+  width: 10%;
+  vertical-align: middle;
+}
+#sect1 .inner {
+  display: flex;
+  height: 100%;
+  width: 60%;
+  margin: auto;
+  align-items: center;
+  justify-content: space-around;
+}
+#sect1 .inner h2 {
+  font-size: 46px;
+  color: #ff3744;
+  line-height: 50px;
+  letter-spacing: 3px;
+  text-align: right;
+  width: 40%;
+}
+#sect1 .inner h2 span {
+  display: block;
+  font-size: 18px;
+}
+#sect1 .inner figure {
+  width: 30%;
+}
+#sect1 .inner figure img {
+  width: 100%;
+}
+
+#sect2 .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 67%;
+  min-width: 1106px;
+  height: 100%;
+  margin: auto;
+}
+#sect2 .inner .title {
+  color: #ff3744;
+  width: 100%;
+  padding-bottom: 150px;
+}
+#sect2 .inner .title h2 {
+  font-size: 3vw;
+  position: relative;
+}
+#sect2 .inner .title h2::after {
+  content: "";
+  width: 280px;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #ff3744;
+}
+#sect2 .inner .desc {
+  color: #794556;
+  font-size: 1.5vw;
+  letter-spacing: 0.2em;
+  line-height: 1.3em;
+}
+#sect2 .inner .desc span.sweat::after {
+  position: relative;
+  content: url(./images/sweat\ 1.svg);
+}
+#sect2 .circle {
+  position: absolute;
+  border-radius: 100%;
+  bottom: -90px;
+  z-index: -1;
+}
+#sect2 .circle.circle1 {
+  width: 450px;
+  height: 450px;
+  left: -100px;
+  background-color: #bee86e;
+}
+#sect2 .circle.circle2 {
+  z-index: -2;
+  width: 240px;
+  height: 240px;
+  left: 240px;
+  background-color: #afd755;
+}
+#sect2 .hi {
+  position: absolute;
+  width: 20vw;
+  right: 15%;
+  top: 10%;
+}
+#sect2 .hi img {
+  width: 100%;
+}
+
+#sect3 {
+  background-color: #f8e9ee;
+}
+#sect3 .tit {
+  position: relative;
+  padding: 40px 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+}
+#sect3 h2 {
+  color: #e41459;
+  font-size: 3vw;
+  position: relative;
+  text-align: center;
+  width: 350px;
+}
+#sect3 h2::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -20px;
+  left: 0;
+  background: #e41459;
+}
+#sect3 .keys {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 1200px;
+  min-width: 900px;
+  display: flex;
+  height: 70%;
+  align-items: center;
+  padding: 10px;
+}
+#sect3 .keys .key {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+#sect3 .keys .key .spot {
+  width: 350px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  background-color: #ffffff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#sect3 .keys .key .spot.spot1 figure {
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#sect3 .keys .key .spot.spot1 h3 {
+  color: #ff5f69;
+}
+#sect3 .keys .key .spot.spot2 figure {
+  left: calc(50% + 40px);
+  bottom: -10px;
+  transform: translateX(-50%);
+}
+#sect3 .keys .key .spot.spot2 h3 {
+  color: #9ca7c9;
+}
+#sect3 .keys .key .spot.spot3 figure {
+  top: 10px;
+  right: 10px;
+}
+#sect3 .keys .key .spot.spot3 h3 {
+  color: #794556;
+}
+#sect3 .keys .key .spot figure {
+  position: absolute;
+  width: 50px;
+}
+#sect3 .keys .key .spot figure img {
+  width: 100%;
+}
+#sect3 .keys .key .spot h3 {
+  width: 90%;
+  text-align: center;
+  font-size: 2vw;
+}
+#sect3 .keys .key .desc {
+  height: 60%;
+  font-size: 1.4vw;
+  color: #692d41;
+  padding: 10px;
+  line-height: 2vw;
+}
+
+#sect4 {
+  background: linear-gradient(180deg, rgb(255, 153, 187) 0%, rgb(252, 252, 252) 100%);
+}
+#sect4 .tit {
+  position: relative;
+  left: 5%;
+  width: 300px;
+  padding: 40px 0;
+}
+#sect4 .tit h2 {
+  text-align: center;
+  font-size: 3vw;
+  color: #fff;
+  position: relative;
+}
+#sect4 .tit h2::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -20px;
+  left: 0;
+  background: #fff;
+}
+#sect4 .inner {
+  width: 1200px;
+  height: 80%;
+  max-height: 650px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 10px 0;
+}
+#sect4 .inner img {
+  margin: auto;
+  width: 100%;
+  display: block;
+}
+
+#sect5 {
+  height: 50vh;
+  background-color: #819fff;
+  color: white;
+}
+#sect5 .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#sect5 .inner h2 {
+  font-size: 80px;
+  letter-spacing: 9px;
+  position: relative;
+}
+#sect5 .inner h2 > img {
+  position: absolute;
+}
+#sect5 .inner h2 > img.mini {
+  width: 30px;
+}
+#sect5 .inner h2 > img.check {
+  left: 0;
+  top: -28px;
+}
+#sect5 .inner h2 > img.x {
+  right: -30px;
+  bottom: -15px;
+}
+#sect5 .inner h2 > img.square {
+  width: 210px;
+  transform: translate(-100%, 100%);
+  left: 40px;
+  bottom: 0px;
+}
+#sect5 .inner h2 > img.circle {
+  height: 180px;
+  transform: translate(100%, -100%);
+  top: 20px;
+  right: -5px;
+}
+
+#sect6 .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#sect6 .inner .circle {
+  position: absolute;
+  border-radius: 100%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+#sect6 .inner .cir1 {
+  width: 304px;
+  height: 304px;
+  background-color: #819fff;
+  top: 100%;
+  left: 0;
+}
+#sect6 .inner .cir2 {
+  width: 470px;
+  height: 470px;
+  background-color: #ff9fbf;
+  top: 0;
+  left: 100%;
+}
+
+#sect7 {
+  background-color: #819fff;
+}
+#sect7 .tit {
+  color: white;
+}
+
+#sect8 .tit {
+  color: #819fff;
+}
+
+#sect7 .tit,
+#sect8 .tit {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-size: 3vw;
+}
+#sect7 .tit h2,
+#sect8 .tit h2 {
+  position: relative;
+  z-index: 1;
+}
+#sect7 .tit .circle,
+#sect8 .tit .circle {
+  border-radius: 100%;
+  background-color: #ff9fbf;
+  width: 76px;
+  height: 76px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+#sect7 .tit .mini,
+#sect8 .tit .mini {
+  width: 48px;
+  height: 48px;
+}
+#sect7 .tit .top,
+#sect8 .tit .top {
+  left: 0;
+  top: 0;
+}
+#sect7 .inner,
+#sect8 .inner {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+}
+
+#sect9 {
+  height: 50vh;
+  background: #ffd8e5 url(./images/desin-element-back.svg) left top/cover;
+}
+#sect9 .inner {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#sect9 h2 {
+  z-index: 1;
+  color: #ff5089;
+  font-size: 80px;
+  letter-spacing: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#sect9 span {
+  color: white;
+  opacity: 0.8;
+  font-size: 60px;
+  position: absolute;
+  font-weight: bold;
+}
+#sect9 span.t1 {
+  top: 50%;
+  left: 20%;
+}
+#sect9 span.t2 {
+  top: 20%;
+  left: 30%;
+}
+#sect9 span.t3 {
+  top: 70%;
+  left: 60%;
+}
+#sect9 span.t4 {
+  left: 70%;
+  top: 35%;
+}
+
+.design-element {
+  background-color: #ffeef3;
+}
+.design-element .inner {
+  width: 80%;
+  padding: 10px 50px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.design-element .inner h2 {
+  font-size: 3vw;
+  color: #ff5089;
+  letter-spacing: 7px;
+  line-height: 5vw;
+}
+.design-element .inner h2.right {
+  text-align: right;
+}
+.design-element .inner .row {
+  padding-bottom: 100px;
+}
+.design-element .inner .keywrap {
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 500px;
+  padding-right: 20px;
+}
+.design-element .inner .keywrap .key {
+  border-radius: 100%;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.design-element .inner .keywrap .key.k1 {
+  background-color: #4361ff;
+}
+.design-element .inner .keywrap .key.k2 {
+  background-color: #819fff;
+}
+.design-element .inner .keywrap .key.k3 {
+  background-color: #ff5f69;
+}
+.design-element .inner .keywrap .key.k4 {
+  background-color: #fbc6d8;
+}
+.design-element .inner .testwrap {
+  font-size: 60px;
+  text-align: center;
+  color: #ff5f69;
+  letter-spacing: 2px;
+}
+.design-element .inner .desc {
+  font-size: 25px;
+  color: #942E50;
+  line-height: 40px;
+}
+
+#sect11 .inner {
+  flex-direction: row;
+  justify-content: space-between;
+}
+#sect11 .inner .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+  height: 780px;
+  align-items: center;
+}
+
+#sect12 .row {
+  display: flex;
+  justify-content: space-around;
+}
+#sect12 .row .col {
+  width: 550px;
+}
+#sect12 .row img {
+  width: 150px;
+}
+
+#sect13 .back {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 178, 183, 0.8274509804);
+  position: absolute;
+}
+#sect13 .back img {
+  z-index: -1;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#sect13 .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#sect13 .inner .imgwrap {
+  height: 100%;
+}
+#sect13 .inner .desc {
+  font-size: 70px;
+  line-height: 90px;
+  letter-spacing: 5px;
+  color: white;
+}
+#sect13 .app {
+  position: absolute;
+  width: 250px;
+  bottom: -50px;
+  right: 0;
+}
+#sect13 img {
+  width: 100%;
+}
